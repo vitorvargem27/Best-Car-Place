@@ -10,7 +10,6 @@ Este é um projeto Front-End, de uma loja de carros, feito em Angular.
 - Angular
 - SCSS
 - Material UI
-- 
 ## Instruções para Instalação :
 Angular precisa do node.js versão 16+ para funcionar
 
