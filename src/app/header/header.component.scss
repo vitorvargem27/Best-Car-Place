@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+$fonte-principal: 'Playfair Display', serif;
+$fonte-secundaria: 'Open Sans', sans-serif;
+$pequena: 12px;
+$media: 16px;
+$grande: 24px;
+$extra-grande: 32px;
+
+/*COLORS */
+$cor-principal: rgb(115, 115, 212);
+$text-color-footer: white;
+
+/*SHADOW */
+$card-shadow:  7px 7px rgb(81, 81, 151);
+
+
+mat-toolbar {
+    background-color: $cor-principal;
+    color: $text-color-footer;
+
+    .container {
+        width: 1140px;
+        display: flex;
+        margin: auto;
+    }
+
+    h1 {
+        font-family: $fonte-principal;
+        font-size: $extra-grande;
+        text-shadow: 2.5px 2.5px 1px rgb(38, 38, 114);
+        cursor: default;
+        
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+
+    .menu-spacer {
+        flex: 1 1 auto;
+    }
+
+    button {
+        &:hover {
+            background-color: white;
+            color: rgb(66, 0, 110);
+        }
+    }
+
+    .mat-toolbar-text {
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+}

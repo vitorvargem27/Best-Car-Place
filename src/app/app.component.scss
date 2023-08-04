@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+$fonte-principal: 'Playfair Display', serif;
+$fonte-secundaria: 'Open Sans', sans-serif;
+$pequena: 12px;
+$media: 16px;
+$grande: 24px;
+$extra-grande: 32px;
+
+/*COLORS */
+$cor-principal: rgb(115, 115, 212);
+$text-color-footer: white;
+
+/*SHADOW */
+$card-shadow:  7px 7px rgb(81, 81, 151);
