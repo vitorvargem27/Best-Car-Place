@@ -24,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     ContatoComponent,
     HeaderComponent,
     DetalhesComponent,
+    
   ],
   imports: [
     BrowserModule,

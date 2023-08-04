@@ -1,24 +1,45 @@
 @import "../header/header.component.scss";
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.container{
-    background-image: url();
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
 
-mat-card-header{
-    h2{
-        font-size: 50px;
-        text-align: center;
-        color: $cor-principal;
-        back
+    mat-card {
+        width: 500px;
+        height: 600px;
+        background-image: url(https://th.bing.com/th/id/OIP.bvCVTjx5vUPYi1y9ZeNw0wHaGl?pid=ImgDet&w=540&h=480&rs=1);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        border: 2px solid black;
 
-        &:hover{
-            color: rgb(66, 0, 110);
-            cursor: context-menu;
+        mat-card-header {
+            h2 {
+                margin-left: 35%;
+                font-size: 50px;
+                color: $cor-principal;
+
+                &:hover {
+                    color: white;
+                    cursor: context-menu;
+                }
+            }
         }
+
+        .example-form {
+            min-width: 150px;
+            max-width: 500px;
+            width: 100%;
+          }
+          
+          .example-full-width {
+            width: 100%;
+          }
+
     }
-}
 }
