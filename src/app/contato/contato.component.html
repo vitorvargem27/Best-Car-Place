@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Fale conosco</h1>
+    <form>
+        <mat-form-field>
+            <mat-label>Digite seu nome</mat-label>
+            <input matInput placeholder="Vitor Vargem" [formControl]="nome" required>
+            <mat-error *ngIf="nome.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Digite seu e-mail:</mat-label>
+            <input matInput placeholder="example@gmail.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Selecione o assunto :</mat-label>
+            <mat-select [formControl]="assunto">
+                <mat-option value="vendas">Tenho interesse no imóvel</mat-option>
+                <mat-option value="suporte">Reclamação</mat-option>
+                <mat-option value="rh">Quero trabalhar</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Digite sua mensagem</mat-label>
+            <textarea matInput [formControl]="mensagens"></textarea>
+            <mat-error *ngIf="mensagens.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <button mat-button type="submit">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,126 @@
+@import "../header/header.component.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    #image-intro {
+        background-image: url('../../assets/img\ login\ page/background-image.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    mat-grid-tile {
+        padding-left: 200px;
+
+        mat-card {
+            width: 500px;
+            height: 600px;
+            border-radius: 10px;
+            border: 2px solid black;
+
+            mat-card-header {
+                h2 {
+                    margin-left: 35%;
+                    font-size: 50px;
+                    color: $cor-principal;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    text-shadow: 5px 5px 5px rgb(90, 90, 90);
+                    transform: text-shadow 2s;
+
+                    &:hover {
+                        cursor: context-menu;
+                    }
+                }
+            }
+
+            mat-tab-group {
+
+                h2 {
+                    font-size: 50px;
+                    color: rgb(0, 52, 100);
+                    text-align: center;
+                    margin-top: 15px;
+                    text-shadow: 5px 5px 5px rgb(129, 129, 129);
+                    transform: text-shadow 2s;
+
+                    &:hover {
+                        color: rgb(28, 28, 107);
+                        cursor: context-menu;
+                        font-style: italic;
+                    }
+                }
+
+                form {
+                    margin-left: 30px;
+
+                    h3 {
+                        font-size: 25px;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        cursor: default;
+                    }
+
+                    input {
+                        font-size: 15px;
+                        text-align: left;
+                        width: 90%;
+                        height: 30px;
+                        font-style: italic
+                    }
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline
+                        }
+
+                    }
+
+                    button {
+                        margin-left: 130px;
+                        margin-top: 40px;
+                        background-color: green;
+                        width: 150px;
+
+                    }
+
+                }
+
+
+                .example-form {
+                    min-width: 150px;
+                    max-width: 500px;
+                    width: 100%;
+                }
+
+                .example-full-width {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #wppButton{
+        padding-left: 90%;
+
+        button{
+            background-color: white;
+            position: fixed;
+
+            .wppImagem{
+                width: 70px;
+                height: 70px;
+
+            }
+        }
+
+    }
+}

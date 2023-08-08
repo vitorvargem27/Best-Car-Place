@@ -1,0 +1,56 @@
+@import "../app.component.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+mat-toolbar {
+    background-color: $cor-principal;
+    color: $text-color-footer;
+
+    .container {
+        width: 1140px;
+        display: flex;
+        margin: auto;
+    }
+
+    h1 {
+        font-family: $fonte-principal;
+        font-size: $extra-grande;
+        text-shadow: 2.5px 2.5px 1px rgb(38, 38, 114);
+        cursor: default;
+        
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+
+    .menu-spacer {
+        flex: 1 1 auto;
+    }
+
+    button {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-variant: small-caps;
+
+        &:hover {
+            background-color: white;
+            color: rgb(27, 1, 97);
+            font-style: italic;
+        }
+
+        h3{
+            font-size: 22px;
+        }
+    }
+
+    .mat-toolbar-text {
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+}

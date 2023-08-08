@@ -1,0 +1,28 @@
+@import "../header/header.component.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-end {
+    width: 100%;
+
+    mat-toolbar{
+        #sloganName{
+            padding-left: 50px;
+            font-size: 19px;
+        }
+        button{
+            margin-right: 30px;
+        } 
+    }
+
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+
+    .imageSocialLinks {
+        filter: invert(100%);
+    }
+}
