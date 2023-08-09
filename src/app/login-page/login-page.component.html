@@ -1,6 +1,7 @@
 <div class="container">
     <section id="image-intro"></section>
     <section id="loginPlace">
+        <br>
         <mat-grid-list cols="1" rowHeight="2:1" style="margin-right: 50px;">
             <mat-grid-tile>
                 <mat-card>
@@ -8,9 +9,10 @@
                         <mat-card-header>
                             <h2>Início</h2>
                         </mat-card-header>
+                        <br>
                         <hr>
                         <mat-tab-group>
-                            <mat-tab label="Login">
+                            <mat-tab label="Login" id="loginLabel">
                                 <h2>Login</h2>
                                 <form action="">
                                     <h3>Digite seu e-mail</h3>
@@ -25,13 +27,53 @@
                                     </div>
                                 </form>
                             </mat-tab>
-                            <mat-tab label="Second"> Content 2 </mat-tab>
-                            <mat-tab label="Third"> Content 3 </mat-tab>
+                            <mat-tab label="Cadastro">
+                                <h2>Cadastro</h2>
+                                <form action="">
+                                    <h3>Digite seu e-mail</h3>
+                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..."><br>
+                                    <h3>Senha :</h3>
+                                    <input type="password" placeholder=" Digite sua senha..."><br><br>
+                                    <div class="example-button-row">
+                                        <button mat-fab extended color="primary">
+                                            <a>✔️ Finalizar</a>
+                                        </button>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                            <mat-tab label="Quem somos">
+                                <h2 id="quem-somos">Quem somos?</h2>
+                                <br>
+                                <article>Somos um estabelecimento web que trabalha com vendas
+                                    de automóveis através da web e entregas realizadas físicas
+                                    diretamente em seu local de encontro ou moradia!!
+                                </article>
+                                <mat-grid-list cols="2" rowHeight="2:1">
+                                    <mat-grid-tile>
+                                        <div id="likeButton" class="example-button-row">
+                                            <button mat-fab extended color="primary" id="likeBtn">
+                                                <a>✔️ Gostei</a>
+                                            </button>
+                                        </div>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile><div id="unlikeButton" class="example-button-row">
+                                        <button mat-fab extended color="primary" id="unlikedBtn">
+                                            <a>❌ Não gostei</a>
+                                        </button>
+                                    </div></mat-grid-tile>
+                                </mat-grid-list>
+                            </mat-tab>
                         </mat-tab-group>
                     </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
     </section>
-
+    <div id="wppButton" *ngFor="let icon of icones">
+        <a href="https://api.whatsapp.com/send?phone=5511969314707">
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <img [src]="icon.icone" alt="" class="wppImagem">
+            </button>
+        </a>
+    </div>
 </div>

@@ -22,7 +22,7 @@
                                     <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
                                 </button>
                                 <button mat-raised-button color="primary"
-                                    (click)="seeDetails(imovel.id)">Primary</button>
+                                    (click)="seeDetails(imovel.id)">Detalhes</button>
                             </mat-card-actions>
                         </mat-card-content>
                     </mat-card>
@@ -50,8 +50,8 @@
                                 mat-button (click)="toogleFavorito(i)">
                                 <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
                             </button>
-                            <button mat-raised-button color="primary" (click)="openDialog()"
-                                id="buttonDetalhes">Detalhes</button>
+                            <button mat-raised-button color="primary"
+                                    (click)="seeDetails(imovel.id)">Detalhes</button>
 
                             <dialog>
                                 <mat-card>

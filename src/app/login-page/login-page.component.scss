@@ -15,110 +15,150 @@
         background-size: contain;
     }
 
-    mat-grid-tile {
-        padding-left: 200px;
+    #loginPlace {
 
-        mat-card {
-            width: 500px;
-            height: 600px;
-            border-radius: 10px;
-            border: 2px solid black;
+        mat-grid-tile {
+            padding-left: 200px;
 
-            mat-card-header {
-                h2 {
-                    margin-left: 35%;
-                    font-size: 50px;
-                    color: $cor-principal;
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    text-shadow: 5px 5px 5px rgb(90, 90, 90);
-                    transform: text-shadow 2s;
+            mat-card {
+                width: 500px;
+                height: 600px;
+                border-radius: 10px;
+                margin-left: 200px;
 
-                    &:hover {
-                        cursor: context-menu;
-                    }
-                }
-            }
-
-            mat-tab-group {
-
-                h2 {
-                    font-size: 50px;
-                    color: rgb(0, 52, 100);
-                    text-align: center;
-                    margin-top: 15px;
-                    text-shadow: 5px 5px 5px rgb(129, 129, 129);
-                    transform: text-shadow 2s;
-
-                    &:hover {
-                        color: rgb(28, 28, 107);
-                        cursor: context-menu;
-                        font-style: italic;
-                    }
-                }
-
-                form {
-                    margin-left: 30px;
-
-                    h3 {
-                        font-size: 25px;
-                        margin-top: 20px;
-                        margin-bottom: 10px;
-                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                        cursor: default;
-                    }
-
-                    input {
-                        font-size: 15px;
-                        text-align: left;
-                        width: 90%;
-                        height: 30px;
-                        font-style: italic
-                    }
-
-                    a {
-                        text-decoration: none;
+                mat-card-header {
+                    h2 {
+                        margin-left: 35%;
+                        font-size: 50px;
+                        color: $cor-principal;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        text-shadow: 5px 5px 5px rgb(90, 90, 90);
+                        transform: text-shadow 2s;
 
                         &:hover {
-                            text-decoration: underline
+                            cursor: context-menu;
+                        }
+                    }
+                    
+                }
+
+                mat-tab-group {
+
+                    mat-tab label{
+                        &:hover{
+                            font-style: italic;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 50px;
+                        color: rgb(0, 52, 100);
+                        text-align: center;
+                        margin-top: 15px;
+                        text-shadow: 5px 5px 5px rgb(129, 129, 129);
+                        transform: text-shadow 2s;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                        &:hover {
+                            color: rgb(28, 28, 107);
+                            cursor: context-menu;
+                            font-style: italic;
+                        }
+                    }
+
+                    #quem-somos{
+                        font-size: 50px;
+                        color: rgb(0, 60, 116);
+                        text-align: center;
+                        margin-top: 15px;
+                        text-shadow: 3px 3px 3px rgb(112, 112, 112);
+                        transform: text-shadow 2s;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+
+                    article{
+                        text-align: center;
+                        font-size: 25px;
+
+                        &::first-letter{
+                            font-size: 30px;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            font-style: italic;
+                        }
+                    }
+
+                    #likeBtn{
+                        background-color: rgb(52, 133, 52);
+                    }
+
+                    #unlikedBtn{
+                        background-color: rgb(150, 1, 1);
+                    }
+
+                    form {
+                        margin-left: 30px;
+
+                        h3 {
+                            font-size: 25px;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            cursor: default;
+                        }
+
+                        input {
+                            font-size: 15px;
+                            text-align: left;
+                            width: 90%;
+                            height: 30px;
+                            font-style: italic
+                        }
+
+                        a {
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline
+                            }
+
+                        }
+
+                        button {
+                            margin-left: 130px;
+                            margin-top: 40px;
+                            background-color: green;
+                            width: 150px;
+
                         }
 
                     }
 
-                    button {
-                        margin-left: 130px;
-                        margin-top: 40px;
-                        background-color: green;
-                        width: 150px;
 
+                    .example-form {
+                        min-width: 150px;
+                        max-width: 500px;
+                        width: 100%;
                     }
 
-                }
-
-
-                .example-form {
-                    min-width: 150px;
-                    max-width: 500px;
-                    width: 100%;
-                }
-
-                .example-full-width {
-                    width: 100%;
+                    .example-full-width {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 
-    #wppButton{
+    #wppButton {
         padding-left: 90%;
+        padding-bottom: 35px;
 
-        button{
-            background-color: white;
+        button {
+            background-color: green;
             position: fixed;
 
-            .wppImagem{
+            .wppImagem {
                 width: 70px;
                 height: 70px;
-
             }
         }
 

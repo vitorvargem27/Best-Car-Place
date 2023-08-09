@@ -24,7 +24,7 @@ export class LoginPageComponent {
 
     {
       nome : 'Whatsapp',
-      imagem : 'https://i.ibb.co/k3fV0pf/whatsapp-logo-icone-1.png',
+      icone : 'https://i.ibb.co/b1s7k05/whatsapp-logo-icone-1.png',
     }
 
   ]

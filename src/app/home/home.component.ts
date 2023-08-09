@@ -19,20 +19,13 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     CommonModule, MatDialogModule],
 })
 
-export class DialogContentExampleDialog{}
-
 export class HomeComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(private router: Router){}
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  seeDetails(imovelId : string){
+    this.router.navigate(['/detalhes', imovelId]);
   }
-
 
   toogleFavorito(index: number): void {
     this.imoveis[index].favorito = !this.imoveis[index].favorito
