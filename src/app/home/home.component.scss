@@ -16,24 +16,33 @@
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
-        color: $cor-principal;
-        font-size: 40px;
-        text-shadow: 2.5px 2.5px 1px black;
+        color: grey;
+        font-size: 65px;
+        text-shadow: 2.5px 2.5px 1px rgb(172, 172, 172);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     #imoveisFavoritos {
         h2 {
             text-align: center;
-            margin-top: 7px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: rgb(0, 0, 0);
+            font-size: 45px;
+            text-shadow: 2.5px 2.5px 1px grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     }
 
     #listaImoveis {
         padding-top: 80px;
-        h1 {
+
+        h2 {
             text-align: center;
-            margin-top: 50px;
-            font-size: $extra-grande;
+            font-size: 35;
+            color: black;
+            text-shadow: 2.5px 2.5px 1px grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     }
 
@@ -45,11 +54,11 @@
         mat-grid-tile {
 
             mat-card {
-                background-color: white;
-                margin: 8px;
-                border-radius: 5px;
+                background-color: rgb(110, 110, 110);
+                margin: 7px;
+                border-radius: 10px;
                 box-shadow: 4px 4px $cor-principal;
-                border: 3px solid black;
+                border: 5px solid rgb(0, 0, 0);
                 padding: 10px;
 
                 &:hover {
@@ -80,9 +89,9 @@
 
                         li {
                             margin-top: 5px;
-                            font-family: $fonte-secundaria;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                             font-style: italic;
-                            color: rgb(82, 82, 82);
+                            color: white;
                         }
                     }
 
@@ -90,19 +99,27 @@
                         padding-bottom: 20px;
                         gap: 20px;
 
-                        .favorite{
+                        .favorite {
                             width: 20%;
-                            background-color: white;
-                            border: 1px solid $cor-principal;
+                            background-color: rgb(53, 53, 53);
+                            border: 5px solid white;
 
-                            mat-icon{
-                                color: $cor-principal;
+                            &:hover {
+                                background-color: $cor-principal;
+                            }
+
+                            mat-icon {
+                                color: white;
                             }
                         }
 
-                        .favorite-checked{
+                        .favorite-checked {
                             width: 20%;
-                            background-color: $cor-principal;
+                            background-color: rgb(53, 53, 53);
+
+                            mat-icon {
+                                color: gold;
+                            }
                         }
 
                         button {
@@ -110,9 +127,9 @@
                             width: 80%;
                             height: 48px;
                             cursor: pointer;
-                            border: none;
+                            border: 3.5px solid white;
                             border-radius: 4px;
-                            background-color: $cor-principal;
+                            background-color: rgb(68, 68, 68);
                             color: white;
 
                             &:hover {
@@ -121,7 +138,7 @@
                                 font-family: Georgia, 'Times New Roman', Times, serif;
                                 font-style: italic;
                                 text-shadow: 1px 1px 1px $cor-principal;
-                                transition: all 0.5s;
+                                transition: all 0.2s;
                             }
                         }
                     }

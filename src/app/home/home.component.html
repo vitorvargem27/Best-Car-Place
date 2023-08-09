@@ -1,7 +1,6 @@
 <div class="container">
-    <h1 id="titleFav">Olá, {{nome}}!!</h1>
     <section id="imoveisFavoritos">
-        <h2>Confira aqui imóveis com mais de quatro quartos :</h2>
+        <h2>Confira aqui os seus favoritos :</h2>
         <mat-grid-list cols="3" rowHeight="3:4.">
             <div *ngFor="let imovel of imoveis; let i = index">
                 <mat-grid-tile *ngIf="imovel.favorito">
@@ -10,19 +9,20 @@
                         <mat-card-content>
                             <h2>{{ imovel.name }}</h2>
                             <ul>
-                                <li>Bedrooms : {{imovel.quartos}}</li>
-                                <li>Bathrooms : {{imovel.banheiros}}</li>
-                                <li>Area : {{imovel.tamanho}}</li>
-                                <li>Home price: {{imovel.valor}}</li>
+                                <li><strong>Bedrooms : {{imovel.quartos}}</strong></li>
+                                <li><strong>Bathrooms : {{imovel.banheiros}}</strong></li>
+                                <li><strong>Area : {{imovel.tamanho}}</strong></li>
+                                <li><strong>Home price: {{imovel.valor}</strong>}</li>
                             </ul>
                             <mat-card-actions>
                                 <button [class]="imovel.favorito === false ? 'favorite' : 'favorite-checked'"
                                     [title]="imovel.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
                                     mat-button (click)="toogleFavorito(i)">
-                                    <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
+                                    <mat-icon aria-hidden="false" aria-label="Start" fontIcon="star"></mat-icon>
                                 </button>
                                 <button mat-raised-button color="primary"
-                                    (click)="seeDetails(imovel.id)">Detalhes</button>
+                                 (click)="seeDetails(imovel.id)">Detalhes
+                                </button>
                             </mat-card-actions>
                         </mat-card-content>
                     </mat-card>
@@ -31,7 +31,7 @@
         </mat-grid-list>
     </section>
     <section id="listaImoveis">
-        <h1>All sell proprerties list :</h1>
+        <h2>Veja abaixo todos os carros em estoque :</h2>
         <mat-grid-list cols="3" rowHeight="3:4.3">
             <mat-grid-tile *ngFor="let imovel of imoveis; let i = index">
                 <mat-card>
@@ -39,35 +39,18 @@
                     <mat-card-content>
                         <h2>{{ imovel.titulo }}</h2>
                         <ul>
-                            <li>Bedrooms : {{imovel.quartos}}</li>
-                            <li>Bathrooms : {{imovel.banheiros}}</li>
-                            <li>Area : {{imovel.tamanho}}</li>
-                            <li>Home price: {{imovel.valor}}</li>
+                            <li><strong> Bedrooms : {{imovel.quartos}}</strong></li>
+                            <li><strong>Bathrooms : {{imovel.banheiros}}</strong></li>
+                            <li><strong>Area : {{imovel.tamanho}}</strong></li>
+                            <li><strong>Home price: {{imovel.valor}}</strong></li>
                         </ul>
                         <mat-card-actions>
                             <button [class]="imovel.favorito === false ? 'favorite' : 'favorite-checked'"
                                 [title]="imovel.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
                                 mat-button (click)="toogleFavorito(i)">
-                                <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
+                                <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="star"></mat-icon>
                             </button>
-                            <button mat-raised-button color="primary"
-                                    (click)="seeDetails(imovel.id)">Detalhes</button>
-
-                            <dialog>
-                                <mat-card>
-                                    <img mat-card-image [src]="imovel.foto" alt="Sell Home 01" class="moveisPhoto">
-                                    <mat-card-content>
-                                        <h2>{{ imovel.titulo }}</h2>
-                                        <ul>
-                                            <li>Bedrooms : {{imovel.quartos}}</li>
-                                            <li>Bathrooms : {{imovel.banheiros}}</li>
-                                            <li>Area : {{imovel.tamanho}}</li>
-                                            <li>Home price: {{imovel.valor}}</li>
-                                        </ul>
-                                    </mat-card-content>
-                                </mat-card>
-                            </dialog>
-                
+                            <button mat-raised-button color="primary" (click)="seeDetails(imovel.id)">Detalhes</button>
                         </mat-card-actions>
                     </mat-card-content>
                 </mat-card>

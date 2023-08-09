@@ -10,7 +10,6 @@
     padding-bottom: 100px;
 
     #image-intro {
-        background-image: url('../../assets/img\ login\ page/background-image.jpg');
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -24,6 +23,7 @@
                 width: 500px;
                 height: 600px;
                 border-radius: 10px;
+                border: 5px solid rgb(0, 0, 0);
                 margin-left: 200px;
 
                 mat-card-header {

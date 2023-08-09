@@ -37,34 +37,34 @@ export class HomeComponent {
 
     {
       id: 1,
-      titulo: 'Casa Magnífica',
+      titulo: 'Mustang 2023',
       foto: 'https://i.ibb.co/tmsG61R/apartamento.jpg',
       quartos: 4,
       banheiros: "3",
       tamanho: "1.000m²",
-      valor: "R$" + 890 + ".000",
+      valor: "R$" + 600 + ".000",
       favorito: true
     },
 
     {
       id: 2,
-      titulo: 'Mansão Gigante',
+      titulo: 'Camaro Sport 2022',
       foto: 'https://i.ibb.co/JKzFtzj/casa.jpg',
       quartos: 6,
       banheiros: "4",
       tamanho: "1.000m²",
-      valor: "R$1.000.000",
+      valor: "R$300.000",
       favorito: false
     },
 
     {
       id: 3,
-      titulo: 'Casa de Campo',
+      titulo: 'Tesla Model 3',
       foto: 'https://i.ibb.co/5h1XHzY/casa-de-campo.jpg',
       quartos: 7,
       banheiros: 5,
       tamanho: 800 + "m²",
-      valor: "R$" + 150 + ".000",
+      valor: "R$" + 1 + ".000.000",
       favorito: false
     },
 
@@ -100,6 +100,15 @@ export class HomeComponent {
       valor: "R$" + 150 + ".000",
       favorito: true
     },
+  ]
+
+  icons: Array<any> = [
+
+    {
+      nome: "Imagem Favorita",
+      imagem: 'https://i.ibb.co/PMdwgCm/favorite-star.png'
+    }
+
   ]
 
 }
