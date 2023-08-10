@@ -28,31 +28,41 @@ export class HomeComponent {
   }
 
   toogleFavorito(index: number): void {
-    this.imoveis[index].favorito = !this.imoveis[index].favorito
+    this.carros[index].favorito = !this.carros[index].favorito
   }
+
+  title: string = 'Casa Magnífica'
+  fotoExterna: string = 'https://i.ibb.co/JKzFtzj/casa.jpg'
+
+
+  modalDetalhes: Array<any> = [
+
+  ]
 
   nome: string = 'Vitor';
   sobrenome: string = 'Barbosa';
-  imoveis: Array<any> = [
+  carros: Array<any> = [
 
     {
       id: 1,
       titulo: 'Mustang 2023',
-      foto: 'https://i.ibb.co/tmsG61R/apartamento.jpg',
-      quartos: 4,
-      banheiros: "3",
-      tamanho: "1.000m²",
+      fotoExterna:  'https://i.ibb.co/nwjm9ZT/polo-externo.jpg',
+      fotoInterna: 'https://i.ibb.co/zGZHLM8/polo-interno.jpg',
+      fotoTraseira: 'https://i.ibb.co/CH7Wncp/polo-traseira.jpg',
+      ano: 2023,
+      cor: '',
       valor: "R$" + 600 + ".000",
-      favorito: true
+      favorito: true,
     },
 
     {
       id: 2,
       titulo: 'Camaro Sport 2022',
-      foto: 'https://i.ibb.co/JKzFtzj/casa.jpg',
-      quartos: 6,
-      banheiros: "4",
-      tamanho: "1.000m²",
+      fotoExterna: 'https://i.ibb.co/JKzFtzj/casa.jpg',
+      fotoInterna: '',
+      fotoTraseira: '',
+      ano: 2022,
+      cor: '',
       valor: "R$300.000",
       favorito: false
     },
@@ -60,55 +70,50 @@ export class HomeComponent {
     {
       id: 3,
       titulo: 'Tesla Model 3',
-      foto: 'https://i.ibb.co/5h1XHzY/casa-de-campo.jpg',
-      quartos: 7,
-      banheiros: 5,
-      tamanho: 800 + "m²",
+      fotoExterna: 'https://i.ibb.co/5h1XHzY/casa-de-campo.jpg',
+      fotoInterna: '',
+      fotoTraseira: '',
+      ano: 2020,
+      cor: '',
       valor: "R$" + 1 + ".000.000",
       favorito: false
     },
 
     {
       id: 4,
-      titulo: 'Flat Minimalista',
-      foto:  'https://i.ibb.co/FqSpsYt/flat.jpg',
-      quartos: 1,
-      banheiros: "1",
-      tamanho: 36 + "m²",
-      valor: "R$" + 200 + ".000",
+      titulo: 'Volkswagen Polo',
+      fotoExterna:  'https://i.ibb.co/nwjm9ZT/polo-externo.jpg',
+      fotoInterna: 'https://i.ibb.co/zGZHLM8/polo-interno.jpg',
+      fotoTraseira: 'https://i.ibb.co/CH7Wncp/polo-traseira.jpg',
+      ano: 2019,
+      cor: '',
+      valor: "R$" + 95 + ".000",
       favorito: true
     },
 
     {
       id: 5,
-      titulo: 'Sala Comercial',
-      foto: 'https://i.ibb.co/2nNsFkt/sala-comercial.jpg',
-      quartos: 0,
-      banheiros: 1,
-      tamanho: 25,
-      valor: "R$" + 250 + ".000",
+      titulo: 'Ford Fusion',
+      fotoExterna: 'https://i.ibb.co/2nNsFkt/sala-comercial.jpg',
+      fotoInterna: '',
+      fotoTraseira: '',
+      ano: 2020,
+      cor: '',
+      valor: "R$" + 120 + ".000",
       favorito: false
     },
 
     {
       id: 6,
-      titulo: 'Cobertura Duplex',
-      foto: 'https://i.ibb.co/pPHQfW2/cobertura.jpg',
-      quartos: 3,
-      banheiros: 3,
-      tamanho: 200,
+      titulo: 'New Beetle',
+      fotoExterna: 'https://i.ibb.co/pPHQfW2/cobertura.jpg',
+      fotoInterna: '',
+      fotoTraseira: '',
+      ano: 2020,
+      cor: '',
       valor: "R$" + 150 + ".000",
       favorito: true
     },
-  ]
-
-  icons: Array<any> = [
-
-    {
-      nome: "Imagem Favorita",
-      imagem: 'https://i.ibb.co/PMdwgCm/favorite-star.png'
-    }
-
   ]
 
 }

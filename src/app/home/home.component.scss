@@ -3,14 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
 .container {
     width: 1140px;
     display: block;
     margin: auto;
-    padding-bottom: 70px;
 
     h1 {
         text-align: center;
@@ -102,7 +101,7 @@
                         .favorite {
                             width: 20%;
                             background-color: rgb(53, 53, 53);
-                            border: 5px solid white;
+                            border: 2px solid white;
 
                             &:hover {
                                 background-color: $cor-principal;
@@ -140,6 +139,12 @@
                                 text-shadow: 1px 1px 1px $cor-principal;
                                 transition: all 0.2s;
                             }
+                        }
+                        
+                        #detailsContainer{
+                            width: 1140px;
+                            margin-left: 80px;
+                            background-color: black;
                         }
                     }
                 }
