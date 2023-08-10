@@ -19,7 +19,6 @@ import {MatButtonModule} from '@angular/material/button';
 })
 
 export class LoginPageComponent {
-
   icones : Array<any> = [
 
     {
@@ -28,5 +27,4 @@ export class LoginPageComponent {
     }
 
   ]
-
 }

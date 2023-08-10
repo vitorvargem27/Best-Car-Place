@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -26,7 +25,6 @@ registerLocaleData(ptBr);
 @NgModule({
   declarations: [
     AppComponent,
-    QuemSomosComponent,
     HeaderComponent,
     DetalhesComponent,
 

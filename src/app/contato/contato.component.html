@@ -3,27 +3,30 @@
     <form>
         <mat-form-field>
             <mat-label>Digite seu nome</mat-label>
-            <input matInput placeholder="Vitor Vargem" [formControl]="nome" required>
+            <input matInput placeholder="Digite seu nome completo..." [formControl]="nome" required>
             <mat-error *ngIf="nome.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Digite seu e-mail:</mat-label>
-            <input matInput placeholder="example@gmail.com" [formControl]="email" required>
+            <input matInput placeholder="example@example.com" [formControl]="email" required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Selecione o assunto :</mat-label>
-            <mat-select [formControl]="assunto">
-                <mat-option value="vendas">Tenho interesse no imóvel</mat-option>
-                <mat-option value="suporte">Reclamação</mat-option>
-                <mat-option value="rh">Quero trabalhar</mat-option>
+            <mat-select [formControl]="assunto" required>
+                <mat-option value="specifiedProduct">Produto específico</mat-option>
+                <mat-option value="suporte">Reclamação ou conserto</mat-option>
+                <mat-option value="productWarranty">Garantia</mat-option>
+                <mat-option value="others">Outros</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Digite sua mensagem</mat-label>
-            <textarea matInput [formControl]="mensagens"></textarea>
+            <mat-label>Digite sua mensagem...</mat-label>
+            <textarea matInput placeholder="Mínimo: 6 caracteres / Máximo: 200 caracteres" [formControl]="mensagens"></textarea>
             <mat-error *ngIf="mensagens.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
-        <button mat-button type="submit">Enviar</button>
+        <button mat-button [disabled]="(nome.invalid || email.invalid || mensagens.invalid ? 'true' : '')" type="submit">
+            Enviar
+        </button>
     </form>
 </div>

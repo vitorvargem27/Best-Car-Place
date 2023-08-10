@@ -1,68 +1,68 @@
 <div class="container">
     <section id="listaImoveis">
         <h2>Veja abaixo todos os carros em estoque :</h2>
-        <mat-grid-list cols="3" rowHeight="3:4.3">
+        <mat-grid-list cols="3" rowHeight="3:3.9">
             <mat-grid-tile *ngFor="let carro of carros; let i = index">
                 <mat-card>
-                    <div id="carouselExample" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img [src]="carro.fotoExterna" class="d-block w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img [src]="carro.fotoInterna" class="d-block w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img [src]="carro.fotoTraseira" class="d-block w-100" alt="">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <mat-card-content>
-                        <h2>{{ carro.titulo }}</h2>
-                        <ul>
-                            <li><strong>Modelo : {{carro.ano}}</strong></li>
-                            <li><strong>Cor : {{carro.cor}}</strong></li>
-                            <li><strong>Home price: {{carro.valor}}</strong></li>
-                        </ul>
-                        <mat-card-actions>
-                            <button [class]="carro.favorito === false ? 'favorite' : 'favorite-checked'"
-                                [title]="carro.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
-                                mat-button (click)="toogleFavorito(i)">
-                                <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="star"></mat-icon>
-                            </button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                Detalhes
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content" id="detailsContainer">
-                                        <div class="container">
-                                            <h2>Detalhes do produto {{title}}</h2>
-                                            <section class="product-details">
-                                                <img [src]="fotoExterna" alt="Foto da {{title}}">
-                                                <div class="product-description">
-                                                </div>
-                                            </section>
+                    <div class="flipCard">
+                        <div class="flipCardInner" id="flipCardInner">
+                            <div class="flipCardFront" id="flipCardFront">
+                                <div id="carouselExample" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img [src]="carro.fotoExterna" class="d-block w-100" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img [src]="carro.fotoInterna" class="d-block w-100" alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img [src]="carro.fotoTraseira" class="d-block w-100" alt="">
                                         </div>
                                     </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <mat-card-content>
+                                    <h2>{{ carro.titulo }} {{carro.ano}}</h2>
+                                    <ul>
+                                        <li><strong>Modelo : {{carro.ano}}</strong></li>
+                                        <li><strong>Cor : {{carro.cor}}</strong></li>
+                                        <li><strong>Home price: {{carro.valor}}</strong></li>
+                                    </ul>
+                                    <mat-card-actions>
+                                        <button [class]="carro.favorito === false ? 'favorite' : 'favorite-checked'"
+                                            [title]="carro.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
+                                            mat-button (click)="toogleFavorito(i)">
+                                            <mat-icon aria-hidden="false" aria-label="Favoritos"
+                                                fontIcon="star"></mat-icon>
+                                        </button>
+                                        <button onclick="rotateCard()" type="button" id="detailsButton" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            Detalhes
+                                        </button>
+                                    </mat-card-actions>
+                                </mat-card-content>
+                            </div>
+
+                            <!--Back of the product Card-->
+                            <div class="flipCardBack" id="flipCardBack">
+                                <div class="backCardBody">
+                                    <img [src]="carro.fotoTraseira" class="d-block w-100" alt="">
+                                    <img [src]="carro.fotoInterna" class="d-block w-100" alt="">
                                 </div>
                             </div>
-                        </mat-card-actions>
-                    </mat-card-content>
+                            <mat-card-content>
+                            </mat-card-content>
+                        </div>
+                    </div>
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>

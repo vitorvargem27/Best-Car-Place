@@ -53,20 +53,68 @@
         mat-grid-tile {
 
             mat-card {
-                background-color: rgb(110, 110, 110);
+                background-color: rgba(110, 110, 110, 0.397);
                 margin: 7px;
+                width: 500px;
+                height: 450px;
                 border-radius: 10px;
-                box-shadow: 4px 4px $cor-principal;
-                border: 5px solid rgb(0, 0, 0);
+                box-shadow: 7px 7px $cor-principal;
+                border: 1.5px solid rgb(0, 0, 0);
                 padding: 10px;
 
                 &:hover {
-                    box-shadow: $card-shadow;
+                    box-shadow: 8px 8px rgb(156, 156, 156);
                     transition: all 0.5s;
                 }
 
-                .moveisPhoto {
+                .flipCard {
+                    background-color: transparent;
+                    perspective: 1000px;
+
+                    .flipCardInner {
+                        transform-style: preserve-3d;
+                        transition: transform 1s;
+                    }
+
+                    .flipCardFront {
+                        backface-visibility: hidden;
+                        position: absolute;
+                    }
+
+                    .flipCardBack {
+                        backface-visibility: hidden;
+                        transform: rotateY(180deg);
+
+                        .backCardBody {
+                            display: flex;
+
+                            img {
+                                margin-right: 20px;
+                                width: 100px;
+                                height: 100px;
+                                padding: 2px;
+                                border-radius: 10px;
+                                border: 2px solid black;
+                            }
+                        }
+                    }
+                }
+
+                .flipCardInner {
+                    &:hover {
+                        transform: rotateY(-180deg);
+                    }
+                }
+
+                .carousel-item {
                     width: 100%;
+                    height: 195px;
+
+                    img {
+                        height: 230px;
+                        border-radius: 5px;
+                        border: 1.7px solid black;
+                    }
 
                 }
 
@@ -87,6 +135,7 @@
                         list-style-type: none;
 
                         li {
+                            text-shadow: 1px 1px black;
                             margin-top: 5px;
                             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                             font-style: italic;
@@ -140,11 +189,25 @@
                                 transition: all 0.2s;
                             }
                         }
-                        
-                        #detailsContainer{
+
+                        #detailsContainer {
                             width: 1140px;
-                            margin-left: 80px;
-                            background-color: black;
+                            height: 600px;
+                            margin: 20px 0 0 80px;
+                            background-color: rgb(255, 255, 255);
+                            border-radius: 10px;
+
+                            h2 {
+                                font-size: 35px;
+                                text-align: center;
+                            }
+
+                            img {
+                                margin-left: 40px;
+                                margin-top: 30px;
+                                width: 400px;
+                                height: 400px;
+                            }
                         }
                     }
                 }

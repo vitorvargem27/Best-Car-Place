@@ -31,6 +31,19 @@ export class HomeComponent {
     this.carros[index].favorito = !this.carros[index].favorito
   }
 
+  rotateCard(){
+    let cardContentRotate = document.getElementById("flipCardInner")
+    let frontCard = document.getElementById("flipCardFront");
+    let backCard = document.getElementById("flipCardBack");
+    let buttonRotate = document.getElementById("detailsButton")
+
+    if(frontCard?.style.display === "inline"){
+      backCard?.style.display === "inline"
+      cardContentRotate?.style.transform === "rotateY(-180deg)"
+      
+    }
+  }
+
   title: string = 'Casa Magnífica'
   fotoExterna: string = 'https://i.ibb.co/JKzFtzj/casa.jpg'
 
@@ -45,37 +58,37 @@ export class HomeComponent {
 
     {
       id: 1,
-      titulo: 'Mustang 2023',
-      fotoExterna:  'https://i.ibb.co/nwjm9ZT/polo-externo.jpg',
-      fotoInterna: 'https://i.ibb.co/zGZHLM8/polo-interno.jpg',
-      fotoTraseira: 'https://i.ibb.co/CH7Wncp/polo-traseira.jpg',
+      titulo: 'Ford Mustang',
+      fotoExterna:  'https://i.ibb.co/bPvZWqY/mustang-dianteira.jpg',
+      fotoInterna: 'https://i.ibb.co/P6fZx6H/mustang-interno.jpg',
+      fotoTraseira: 'https://i.ibb.co/jTyZ3ZY/mustang-traseira.jpg',
       ano: 2023,
-      cor: '',
+      cor: 'Vermelho',
       valor: "R$" + 600 + ".000",
       favorito: true,
     },
 
     {
       id: 2,
-      titulo: 'Camaro Sport 2022',
-      fotoExterna: 'https://i.ibb.co/JKzFtzj/casa.jpg',
-      fotoInterna: '',
-      fotoTraseira: '',
-      ano: 2022,
-      cor: '',
-      valor: "R$300.000",
+      titulo: 'Tesla Model 3',
+      fotoExterna: 'https://i.ibb.co/tMq21LV/tesla-dianteira.jpg',
+      fotoInterna: 'https://i.ibb.co/2WKQYd8/tesla-interior.jpg',
+      fotoTraseira: 'https://i.ibb.co/LhVjJy1/tesla-traseira.jpg',
+      ano: 2020,
+      cor: 'Vermelho',
+      valor: "R$" + 1 + ".000.000",
       favorito: false
     },
 
     {
       id: 3,
-      titulo: 'Tesla Model 3',
-      fotoExterna: 'https://i.ibb.co/5h1XHzY/casa-de-campo.jpg',
-      fotoInterna: '',
-      fotoTraseira: '',
-      ano: 2020,
-      cor: '',
-      valor: "R$" + 1 + ".000.000",
+      titulo: 'Camaro Sport',
+      fotoExterna: 'https://i.ibb.co/ssTZf5T/camaro-frente.jpg',
+      fotoInterna: 'https://i.ibb.co/dKyfJqd/camaro-interno.jpg',
+      fotoTraseira: 'https://i.ibb.co/472j0LN/camaro-traseira.jpg',
+      ano: 2022,
+      cor: 'Azul',
+      valor: "R$300.000",
       favorito: false
     },
 
@@ -86,7 +99,7 @@ export class HomeComponent {
       fotoInterna: 'https://i.ibb.co/zGZHLM8/polo-interno.jpg',
       fotoTraseira: 'https://i.ibb.co/CH7Wncp/polo-traseira.jpg',
       ano: 2019,
-      cor: '',
+      cor: 'Prata',
       valor: "R$" + 95 + ".000",
       favorito: true
     },
