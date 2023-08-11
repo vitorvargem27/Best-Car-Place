@@ -19,6 +19,11 @@ import {MatButtonModule} from '@angular/material/button';
 })
 
 export class LoginPageComponent {
+
+  article: string = 'Somos um estabelecimento web que trabalha com vendas de automóveis através da web e entregas realizadas físicas diretamente em seu local de encontro ou moradia!!'
+
+  vendaAutomovel: string = 'https://i.ibb.co/34x302x/negocios-venda.jpg'
+
   icones : Array<any> = [
 
     {

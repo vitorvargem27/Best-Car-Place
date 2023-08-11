@@ -7,6 +7,7 @@
 
 .container-end {
     width: 100%;
+    min-height: calc(40vh - 226px);
 
     mat-toolbar{
         #sloganName{

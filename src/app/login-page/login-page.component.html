@@ -43,24 +43,24 @@
                             </mat-tab>
                             <mat-tab label="Quem somos">
                                 <h2 id="quem-somos">Quem somos?</h2>
-                                <br>
-                                <article>Somos um estabelecimento web que trabalha com vendas
-                                    de automóveis através da web e entregas realizadas físicas
-                                    diretamente em seu local de encontro ou moradia!!
+                                <article>{{article}}
                                 </article>
+                                <img id="imgQuemSomos" [src]="vendaAutomovel" alt="Venda de automóveis">
                                 <mat-grid-list cols="2" rowHeight="2:1">
-                                    <mat-grid-tile>
-                                        <div id="likeButton" class="example-button-row">
+                                    <mat-grid-tile class="buttonTile">
+                                        <div id="likeBtn" class="example-button-row">
                                             <button mat-fab extended color="primary" id="likeBtn">
                                                 <a>✔️ Gostei</a>
                                             </button>
                                         </div>
                                     </mat-grid-tile>
-                                    <mat-grid-tile><div id="unlikeButton" class="example-button-row">
-                                        <button mat-fab extended color="primary" id="unlikedBtn">
-                                            <a>❌ Não gostei</a>
-                                        </button>
-                                    </div></mat-grid-tile>
+                                    <mat-grid-tile class="buttonTile">
+                                        <div id="unlikedBtn" class="example-button-row">
+                                            <button mat-fab extended color="primary" id="unlikedBtn">
+                                                <a>❌ Não gostei</a>
+                                            </button>
+                                        </div>
+                                    </mat-grid-tile>
                                 </mat-grid-list>
                             </mat-tab>
                         </mat-tab-group>

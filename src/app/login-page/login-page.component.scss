@@ -6,7 +6,6 @@
 }
 
 .container {
-    padding-top: 50px;
     padding-bottom: 100px;
 
     #image-intro {
@@ -15,16 +14,17 @@
     }
 
     #loginPlace {
+        padding-bottom: 150px;
 
         mat-grid-tile {
             padding-left: 200px;
+            height: 850px;
 
             mat-card {
-                width: 500px;
-                height: 600px;
-                border-radius: 10px;
-                border: 5px solid rgb(0, 0, 0);
                 margin-left: 200px;
+                border-radius: 10px;
+                width: 500px;
+                border: 2px solid black;
 
                 mat-card-header {
                     h2 {
@@ -39,13 +39,13 @@
                             cursor: context-menu;
                         }
                     }
-                    
+
                 }
 
                 mat-tab-group {
 
-                    mat-tab label{
-                        &:hover{
+                    mat-tab label {
+                        &:hover {
                             font-style: italic;
                         }
                     }
@@ -66,7 +66,7 @@
                         }
                     }
 
-                    #quem-somos{
+                    #quem-somos {
                         font-size: 50px;
                         color: rgb(0, 60, 116);
                         text-align: center;
@@ -76,27 +76,41 @@
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     }
 
-                    article{
+                    article {
                         text-align: center;
                         font-size: 25px;
 
-                        &::first-letter{
+                        &::first-letter {
                             font-size: 30px;
                             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                             font-style: italic;
                         }
                     }
 
-                    #likeBtn{
-                        background-color: rgb(52, 133, 52);
+                    #imgQuemSomos {
+                        margin-top: 40px;
+                        margin-left: 40px;
+                        width: 400px;
+                        height: 200px;
                     }
 
-                    #unlikedBtn{
-                        background-color: rgb(150, 1, 1);
+                    .buttonTile {
+                        height: 300px;
+
+                        #likeBtn {
+                            border-radius: 10px;
+                            background-color: rgba(0, 185, 0, 0.747);
+                        }
+
+                        #unlikedBtn {
+                            border-radius: 10px;
+                            background-color: rgba(204, 0, 0, 0.733);
+                        }
                     }
 
                     form {
                         margin-left: 30px;
+                        padding-bottom: 40px;
 
                         h3 {
                             font-size: 25px;
@@ -124,13 +138,12 @@
                         }
 
                         button {
-                            margin-left: 130px;
+                            margin-left: 120px;
                             margin-top: 40px;
                             background-color: green;
                             width: 150px;
 
                         }
-
                     }
 
 
