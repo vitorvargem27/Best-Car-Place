@@ -33,7 +33,7 @@
         }
     }
 
-    #listaImoveis {
+    #listaCarros {
         padding-top: 80px;
 
         h2 {
@@ -79,11 +79,20 @@
                     .flipCardFront {
                         backface-visibility: hidden;
                         position: absolute;
+
+                        #imgFrontCard {
+                            width: 340px;
+                        }
                     }
 
                     .flipCardBack {
                         backface-visibility: hidden;
                         transform: rotateY(180deg);
+
+                        hr {
+                            background-color: black;
+                            height: 5px;
+                        }
 
                         .backCardBody {
                             display: flex;
@@ -97,13 +106,35 @@
                                 border: 2px solid black;
                             }
                         }
+
+                        .detailsList {
+                            margin: 15px 0px 0px 15px;
+
+                        }
+
+                        ul {
+                            list-style-type: square;
+                            text-shadow: 1px 1px rgb(49, 49, 49);
+                            margin-top: 5px;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            color: rgb(0, 0, 0);
+                        }
+
+                        .detailsArtcile {
+                            margin-top: 10px;
+
+                            article {
+                                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                                color: rgb(0, 0, 0);
+                                text-shadow: 0.2px 0.2px white;
+                                font-style: oblique;
+                            }
+                        }
                     }
                 }
 
                 .flipCardInner {
-                    &:hover {
-                        transform: rotateY(-180deg);
-                    }
+
                 }
 
                 .carousel-item {
@@ -163,7 +194,7 @@
 
                         .favorite-checked {
                             width: 20%;
-                            background-color: rgb(53, 53, 53);
+                            background-color: white;
 
                             mat-icon {
                                 color: gold;
@@ -188,6 +219,11 @@
                                 text-shadow: 1px 1px 1px $cor-principal;
                                 transition: all 0.2s;
                             }
+                        }
+
+                        #detailsButton{
+                            background-color: red;
+                            transform: rotateY('angle');
                         }
 
                         #detailsContainer {
