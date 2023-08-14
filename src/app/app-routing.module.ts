@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 const routes: Routes = [
   //Declarando a página home//
@@ -10,6 +11,10 @@ const routes: Routes = [
 
   {
     path: 'login-page', component: LoginPageComponent
+  },
+
+  {
+    path: 'detalhes', component: DetalhesComponent
   },
 
   {
