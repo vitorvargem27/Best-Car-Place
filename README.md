@@ -6,14 +6,13 @@ This is a Front-End project, developed for Start Tech.
 
 [![Print do projeto](https://i.ibb.co/LRt5h06/print-webpage.png)]
 
-## Tecnologias aplicadas : 
-
+## Applied technologies : 
 - Angular
 - SCSS
 - Material UI
 - Bootstrap
 
-## Instruções para Instalação :
+## Installation instructions :
 This Angular project need a node.js 16+ version for run.
 
 Clone a repository and enter in project folder :
