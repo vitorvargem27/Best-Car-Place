@@ -28,18 +28,13 @@
                                     <h2>{{ carro.titulo }}</h2>
                                     <ul>
                                         <li><strong>Cor : {{carro.cor}}</strong></li>
-                                        <li><strong>Home price: {{carro.valor}}</strong></li>
+                                        <li><strong>Preço: {{carro.valor}}</strong></li>
                                     </ul>
                                     <mat-card-actions>
-                                        <button [class]="carro.favorito === false ? 'favorite' : 'favorite-checked'"
-                                            [title]="carro.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
-                                            mat-button (click)="toogleFavorito(i)">
-                                            <mat-icon aria-hidden="false" aria-label="Favoritos"
-                                                fontIcon="star"></mat-icon>
-                                        </button>
-                                        <button (click)="rotateCard(carro.id)" type="button" id="detailsButton" class="btn btn-primary" data-bs-toggle="modal"
+                                        <button (click)="rotateCard(carro.id)" type="button" id="detailsButton"
+                                            class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">
-                                            Detalhes
+                                            <p>Detalhes atrás</p>
                                         </button>
                                     </mat-card-actions>
                                 </mat-card-content>
@@ -54,18 +49,31 @@
                                 <h2>Detalhes</h2>
                                 <hr>
                                 <div class="detailsList">
-                                    <ul>
-                                        <li>Modelo : Ano {{carro.ano}}</li>
-                                        <li>Portas : {{carro.portas}}</li>
-                                        <li>Cor : {{carro.cor}}</li>
-                                    </ul>
+                                    <mat-grid-list cols="2" rowHeight="2:1">
+                                        <mat-grid-tile>
+                                            <ul>
+                                                <li>Modelo : Ano {{carro.ano}}</li>
+                                                <li>Portas : {{carro.portas}}</li>
+                                                <li>Cor : {{carro.cor}}</li>
+                                            </ul>
+                                        </mat-grid-tile>
+                                        <mat-grid-tile><button
+                                                [class]="carro.favorito === false ? 'favorite' : 'favorite-checked'"
+                                                [title]="carro.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
+                                                mat-button (click)="toogleFavorito(i)">
+                                                <mat-icon aria-hidden="false" aria-label="Favoritos"
+                                                    fontIcon="star"></mat-icon>
+                                            </button></mat-grid-tile>
+                                    </mat-grid-list>
                                 </div>
                                 <div class="detailsArtcile">
-                                    <article><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </strong></article>
+                                    <article>
+                                        <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+                                        </strong>
+                                    </article>
                                 </div>
                             </div>
-                            <mat-card-content>
-                            </mat-card-content>
                         </div>
                     </div>
                 </mat-card>

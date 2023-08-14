@@ -109,6 +109,28 @@
 
                         .detailsList {
                             margin: 15px 0px 0px 15px;
+                            .favorite {
+                                width: 20%;
+                                background-color: rgb(53, 53, 53);
+                                border: 2px solid white;
+    
+                                &:hover {
+                                    background-color: $cor-principal;
+                                }
+    
+                                mat-icon {
+                                    color: white;
+                                }
+                            }
+    
+                            .favorite-checked {
+                                width: 20%;
+                                background-color: white;
+    
+                                mat-icon {
+                                    color: gold;
+                                }
+                            }
 
                         }
 
@@ -126,7 +148,7 @@
                             article {
                                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                                 color: rgb(0, 0, 0);
-                                text-shadow: 0.2px 0.2px white;
+                                text-shadow: 0.2px 0.2px rgb(87, 87, 87);
                                 font-style: oblique;
                             }
                         }
@@ -134,7 +156,9 @@
                 }
 
                 .flipCardInner {
-
+                    &:hover{
+                    transform: rotateY(-180deg);
+                    }
                 }
 
                 .carousel-item {
@@ -178,29 +202,6 @@
                         padding-bottom: 20px;
                         gap: 20px;
 
-                        .favorite {
-                            width: 20%;
-                            background-color: rgb(53, 53, 53);
-                            border: 2px solid white;
-
-                            &:hover {
-                                background-color: $cor-principal;
-                            }
-
-                            mat-icon {
-                                color: white;
-                            }
-                        }
-
-                        .favorite-checked {
-                            width: 20%;
-                            background-color: white;
-
-                            mat-icon {
-                                color: gold;
-                            }
-                        }
-
                         button {
                             display: block;
                             width: 80%;
@@ -222,8 +223,8 @@
                         }
 
                         #detailsButton{
-                            background-color: red;
-                            transform: rotateY('angle');
+                            background-color: rgb(68, 68, 68);
+                            width: 100%;
                         }
 
                         #detailsContainer {

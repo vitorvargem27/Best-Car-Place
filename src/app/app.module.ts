@@ -13,7 +13,6 @@ import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { DetalhesComponent } from './detalhes/detalhes.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -26,7 +25,6 @@ registerLocaleData(ptBr);
   declarations: [
     AppComponent,
     HeaderComponent,
-    DetalhesComponent,
 
   ],
   imports: [
