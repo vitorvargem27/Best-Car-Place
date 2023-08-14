@@ -1,34 +1,34 @@
-# Best Car Place project
+# Best Car Place Project
 ## Project Development in Angular
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-Este é um projeto Front-End, de uma loja de carros, feito em Angular.
+This is a Front-End project, developed for Start<tech>.
 
 ## Tecnologias aplicadas : 
 
 - Angular
 - SCSS
 - Material UI
-## Instruções para Instalação :
-Angular precisa do node.js versão 16+ para funcionar
+- Bootstrap
 
-Clonar o repositório e entrar na pasta do projeto :
+## Instruções para Instalação :
+This Angular project need a node.js 16+ version for run.
+
+Clone a repository and enter in project folder :
 git clone https://github.com/vitorvargem27/Best-Car-Place.git
 cd Best-Car-Place
 
-Instalar o angular de maneira global na sua máquina : 
-```sh
+Angular global way install on your desktop :
+```
 npm install ng @angular/cli
 ```
-Instalar as demais dependências :
+Install other dependences :
 ````
 npm install
 ````
 
-Rodar o servidor : 
+Run a server : 
 ````
 ng serve
 ````
-
-E assim seu projeto estará pronto para rodar na porta http://localhost:4200/
+After clear this process, the project is clear for run in http://localhost:4200/
