@@ -4,6 +4,8 @@
 
 This is a Front-End project, developed for Start Tech.
 
+[![Print do projeto](https://i.ibb.co/LRt5h06/print-webpage.png)]
+
 ## Tecnologias aplicadas : 
 
 - Angular
