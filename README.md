@@ -2,7 +2,7 @@
 ## Project Development in Angular
 
 
-This is a Front-End project, developed for Start<tech>.
+This is a Front-End project, developed for Start Tech.
 
 ## Tecnologias aplicadas : 
 
