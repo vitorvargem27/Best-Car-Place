@@ -1,5 +1,5 @@
 # Best Car Place Project
-## Project Development in Angular
+## Project Developed in Angular
 
 
 This is a Front-End project, developed for Start Tech.
